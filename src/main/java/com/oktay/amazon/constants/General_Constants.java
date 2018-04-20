@@ -1,5 +1,7 @@
 package com.oktay.amazon.constants;
 
+import org.openqa.selenium.By;
+
 /**
  * @author oktay
  *
@@ -15,5 +17,7 @@ public interface General_Constants {
     String EMAIL = "oktyuyar@gmail.com";
     String PHONE = "5382003000";
     String PASSWORD = "123" ;
+    
+    final By loginPage = By.id("nav-link-accountList");
 
 }

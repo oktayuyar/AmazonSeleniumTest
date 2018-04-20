@@ -12,12 +12,10 @@ public interface General_Constants {
     String DRIVER_PATH= "./driver/chromedriver";
     String URL_AMAZON = "https://www.amazon.com";
 
-    String NAME = "Oktay";
-    String SURNAME = "Uyar" ;
-    String EMAIL = "oktyuyar@gmail.com";
-    String PHONE = "5382003000";
-    String PASSWORD = "123" ;
-    
-    final By loginPage = By.id("nav-link-accountList");
+    String name = "Oktay";
+    String surname = "Uyar" ;
+    String email = "oktyuyar@gmail.com";
+    String phone = "5382003000";
+    String password = "123" ;
 
 }

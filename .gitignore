@@ -5,6 +5,7 @@
 
 # Maven 
 target/
+bin/
 
 # OS
 .DS_Store

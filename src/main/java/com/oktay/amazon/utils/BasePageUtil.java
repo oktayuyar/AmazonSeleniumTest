@@ -50,7 +50,7 @@ public class BasePageUtil implements General_Constants {
 	public WebElement clickWithJs(By by) {
 		WebElement element = driver.findElement(by);
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
-		executor.executeScript("arguments[0].elementToTap();", element);
+		executor.executeScript("arguments[0].click();", element);
 		return element;
 	}
 

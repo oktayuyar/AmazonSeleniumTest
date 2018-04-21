@@ -21,15 +21,15 @@ public class AmazonHomePage extends BasePageUtil implements AmazonHomePage_Const
 	}
 
 	public AmazonLoginPage callLoginPage() {
-		
+
 		assertThat(getTitle()).isEqualTo(homePageTitle);
 		clickElement(loginPage);
 		assertThat(getTitle()).isEqualTo(loginPageTitle);
 		return new AmazonLoginPage(driver);
 	}
-	
+
 	public AmazonHomePage searchProduct() {
-		
+
 		setText(productSearchTextBox, product);
 		find(productSearchTextBox).sendKeys(Keys.ENTER);
 		assertThat(getTitle()).isEqualTo(searchResult);
@@ -40,9 +40,9 @@ public class AmazonHomePage extends BasePageUtil implements AmazonHomePage_Const
 		assertThat(getTitle()).containsSequence(selectedProductPage);
 		return this;
 	}
-	
+
 	public AmazonHomePage addToListProduct() {
-		
+
 		clickElement(addToListButton);
 		assertThat(getText(addToListPopupTitle)).isEqualTo("Add to List");
 		waitAndClickElement(continueShoppingButton);

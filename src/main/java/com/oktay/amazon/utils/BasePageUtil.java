@@ -36,21 +36,21 @@ public class BasePageUtil implements General_Constants {
 	public void waitAndClickElement(By by) {
 		WebElement element;
 		WebDriverWait wait = new WebDriverWait(driver, 5);
-		element= wait.until(ExpectedConditions.elementToBeClickable(by));
+		element = wait.until(ExpectedConditions.elementToBeClickable(by));
 		find(by).click();
 	}
 
 	public void click(By by) {
 		driver.findElement(by).click();
 	}
-	
+
 	public void clickWebElement(WebElement webElement) {
 		webElement.click();
 	}
-	
+
 	public WebElement clickWithJs(By by) {
 		WebElement element = driver.findElement(by);
-		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", element);
 		return element;
 	}
@@ -72,24 +72,23 @@ public class BasePageUtil implements General_Constants {
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
 		return element;
 	}
-	
-    public void controlSearchPage(String pageNumber){
-        if(driver.getCurrentUrl().contains("page="+pageNumber)){
-        }
-        else {
-            assertThat(pageNumber+" nolu sayfaya geçilemedi!");
-        }
-    }
-	
-	public void findElementFromListAndClick(By by, int index){
+
+	public void controlSearchPage(String pageNumber) {
+		if (driver.getCurrentUrl().contains("page=" + pageNumber)) {
+		} else {
+			assertThat(pageNumber + " nolu sayfaya geçilemedi!");
+		}
+	}
+
+	public void findElementFromListAndClick(By by, int index) {
 		List<WebElement> el = driver.findElements(by);
 		for (int i = 0; i < el.size(); i++) {
 			System.out.println(i);
-			if(i==(index-1)) {
+			if (i == (index - 1)) {
 				clickWebElement(el.get(i));
 			}
 		}
-		
+
 	}
 
 	public void sleep(int second) {

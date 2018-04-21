@@ -24,5 +24,5 @@ public interface AmazonHomePage_Constants extends General_Constants{
     public By selectedProduct2 = By.xpath("//*[text()='Official Galaxy S8/S8+ In-Ear Headphones [EO-IG955BSEGWW], Fone-Stuff – Tuned by AKG, Remote + Mic Hands-free Earphones – Titanium Grey  (No Retail Packaging)']");
     public By addToListButton = By.id("add-to-wishlist-button-submit");
     public By addToListPopupTitle = By.id("a-popover-header-7");
-    public By continueShoppingButton = By.xpath("//*[text()='Continue shopping']");
+    public By continueShoppingButton = By.id("add-to-cart-button");
 }

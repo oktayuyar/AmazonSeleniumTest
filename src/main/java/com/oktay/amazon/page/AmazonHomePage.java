@@ -42,7 +42,8 @@ public class AmazonHomePage extends BasePageUtil implements AmazonHomePage_Const
 	public AmazonHomePage addToListProduct() {
 			clickElement(addToListButton);
 			assertThat(getText(addToListPopupTitle)).isEqualTo("Add to List");
-			clickElement(continueShoppingButton);
+			click(continueShoppingButton);
+			click(addToListButton);
 			
 		return this;
 	}

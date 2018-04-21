@@ -1,1 +1,1 @@
-# Amazon Web Automation Test 
+# Amazon Test Automation Examples

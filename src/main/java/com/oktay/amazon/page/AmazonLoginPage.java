@@ -18,7 +18,7 @@ public class AmazonLoginPage extends BasePageUtil implements AmazonLoginPage_Con
 	}
 
 	public AmazonHomePage successfulLogin() {
-		
+
 		setText(emailTextField, email);
 		clickElement(continueButton);
 		setText(passwordTextField, password);

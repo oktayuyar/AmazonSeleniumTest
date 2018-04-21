@@ -1,1 +1,1 @@
-# AmazonSeleniumTest
+# Amazon Test Automation Examples

@@ -1,9 +1,13 @@
 package com.oktay.amazon.utils;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+import static org.assertj.core.api.Assertions.*;
 
 import com.oktay.amazon.constants.General_Constants;
 
@@ -30,6 +34,10 @@ public class BasePageUtil implements General_Constants {
 	public void click(By by) {
 		driver.findElement(by).click();
 	}
+	
+	public void clickWebElement(WebElement webElement) {
+		webElement.click();
+	}
 
 	public void submit(By by) {
 		driver.findElement(by).submit();
@@ -47,6 +55,25 @@ public class BasePageUtil implements General_Constants {
 		WebElement element = driver.findElement(by);
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
 		return element;
+	}
+	
+    public void controlSearchPage(String pageNumber){
+        if(driver.getCurrentUrl().contains("page="+pageNumber)){
+        }
+        else {
+            assertThat(pageNumber+" nolu sayfaya geçilemedi!");
+        }
+    }
+	
+	public void findElementFromListAndClick(By by, int index){
+		List<WebElement> el = driver.findElements(by);
+		for (int i = 0; i < el.size(); i++) {
+			System.out.println(i);
+			if(i==(index-1)) {
+				clickWebElement(el.get(i));
+			}
+		}
+		
 	}
 
 	public void sleep(int second) {

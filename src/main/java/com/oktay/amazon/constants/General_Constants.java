@@ -16,6 +16,6 @@ public interface General_Constants {
     String surname = "Uyar" ;
     String email = "oktyuyar@gmail.com";
     String phone = "5382003000";
-    String password = "123" ;
+    String password = "1q2w3e." ;
 
 }

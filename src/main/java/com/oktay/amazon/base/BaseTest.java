@@ -22,8 +22,8 @@ public class BaseTest implements General_Constants {
 		driver.navigate().to(URL_AMAZON);
 	}
 
-	@After
-	public void close() {
-		driver.close();
-	}
+//	@After
+//	public void close() {
+//		driver.close();
+//	}
 }

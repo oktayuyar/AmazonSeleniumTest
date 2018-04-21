@@ -14,7 +14,11 @@ public class AmazonTest extends BaseTest {
 	@Test
 	public void successLoginTest() {
 
-		new AmazonHomePage(driver).callLoginPage().successfulLogin();
+		new AmazonHomePage(driver)
+				.callLoginPage()
+				.successfulLogin()
+				.searchProduct()
+				.addToListProduct();
 	}
 
 }

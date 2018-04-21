@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 
 import static org.assertj.core.api.Assertions.*;
 
+import java.awt.Desktop.Action;
+
 import com.oktay.amazon.constants.AmazonHomePage_Constants;
 import com.oktay.amazon.utils.BasePageUtil;
 
@@ -42,8 +44,7 @@ public class AmazonHomePage extends BasePageUtil implements AmazonHomePage_Const
 	public AmazonHomePage addToListProduct() {
 			clickElement(addToListButton);
 			assertThat(getText(addToListPopupTitle)).isEqualTo("Add to List");
-			click(continueShoppingButton);
-			click(addToListButton);
+			waitAndClickElement(continueShoppingButton);
 			
 		return this;
 	}

@@ -32,6 +32,7 @@ public class BasePageUtil implements General_Constants {
 	public void clickElement(By by) {
 		find(by).click();
 	}
+
 	public void waitAndClickElement(By by) {
 		WebElement element;
 		WebDriverWait wait = new WebDriverWait(driver, 5);
@@ -50,7 +51,7 @@ public class BasePageUtil implements General_Constants {
 	public WebElement clickWithJs(By by) {
 		WebElement element = driver.findElement(by);
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
-		executor.executeScript("arguments[0].elementToTap();", element);
+		executor.executeScript("arguments[0].click();", element);
 		return element;
 	}
 

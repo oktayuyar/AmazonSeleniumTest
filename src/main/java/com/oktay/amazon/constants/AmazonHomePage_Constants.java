@@ -15,7 +15,6 @@ public interface AmazonHomePage_Constants extends General_Constants{
 	public String secondPage = "2";
 	public String selectedProductPage = "Amazon.com: Official Galaxy S8/S8+ In-Ear Headphones";
 	
-	
     public By loginPage = By.id("nav-link-accountList");
     public By productSearchTextBox = By.id("twotabsearchtextbox");
     public By nextPageButton = By.id("pagnNextString");
